@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Fidget Spinner
+	</title>
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+
+<div class="spinner">
+	<div id="spinner_img">
+		<img src="spinner.png" alt="spinner" id="spinner_it" />
+	
+		
+	</div>
+	
+</div>
+<button data-toggle="tooltip" data-placement="bottom" title="Spin" type="button" class="spin_it btn btn-secondary" id="btn" onclick="btn_spin()" ><i class="fa-solid fa-rotate"></i></button>
+
+
+
+
+
+<script>
+function btn_spin(){
+	var x = 1024;
+var y = 9999;
+
+var deg = Math.floor(Math.random()*(x-y)) + y;
+
+
+document.getElementById("spinner_it").style.transform = "rotate("+deg+"deg)"
+
+// var element = document.getElementById("spinner");
+// element.classList.remove('animate');
+// setTimeout(function(){
+// 	element.classList.add('animate');
+// }, 5000);
+}
+
+
+</script>
+
+
+
+</body>
+
+
+</html>
